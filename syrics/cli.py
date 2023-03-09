@@ -41,7 +41,7 @@ parser.add_argument("URL",
 
 
 def parse_cmd(config):
-    args = parser.parse_args()
+    args, unknown = parser.parse_known_args()
     if args.directory:
         config['download_path'] = args.directory
     if args.force:
